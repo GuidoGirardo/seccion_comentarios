@@ -46,6 +46,10 @@
                         echo '<div class="comments">';
                         echo "<p><b>" . $row["nombre"] . "</b></p>";
                         echo "<p>" . $row["comentario"] . "</p>";
+                        echo "<p>" . $row["likes"] . "</p>";
+                        echo "<p>" . $row["dislikes"] . "</p>";
+                        echo "<button>LIKE</button>";
+                        echo "<button>DISLIKE</button>";
                         echo "</div>";
                     }
                 }

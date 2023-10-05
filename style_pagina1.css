@@ -25,7 +25,7 @@ video{
     right: 10px;
 }
 #comentarios{
-    width: 600px;
+    width: 650px;
     height: 320px;
     background-color: #fefefe;
     position: absolute;
@@ -34,6 +34,7 @@ video{
     overflow: auto;
     padding: 20px;
     font-size: 20px;
+    border-radius: 25px 0 0 25px;
 }
 
 /* div2 */
@@ -67,7 +68,44 @@ video{
 }
 
 /* comments */
-.comments p{
-   margin-top: 10px;
-   background-color: red;
+.comments{
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 10px 40px;
+    position: relative;
+}
+.comments p:nth-child(1){
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.comments p:nth-child(2){
+    margin-bottom: 40px;
+}
+.comments p:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: rgb(35, 228, 35);
+}
+.comments p:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    color: rgb(255, 32, 32);
+}
+.comments button:nth-child(5){
+    position: absolute;
+    bottom: 25px;
+    right: 5px;
+}
+.comments button:nth-child(6){
+    position: absolute;
+    bottom: 25px;
+    right: 80px;
 }
