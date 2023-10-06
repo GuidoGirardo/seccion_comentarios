@@ -14,13 +14,13 @@
 </head>
 <body>
     
-    <h2>VE Y DEJA UN COMENTARIO EN CUALQUIERA DE ESTOS VIDEOS</h2>
+    <h2>PUEDES DEJAR UN COMENTARIO EN CUALQUIERA DE ESTOS VIDEOS</h2>
 
     <article id="videos">
-        <a class="video" id="v1">v1</a>
-        <a class="video" id="v2">v2</a>
-        <a class="video" id="v3">v3</a>
-        <a class="video" id="v4">v4</a>
+        <a href="http://localhost/xampp/scomentarios/pagina1.php" class="video" id="v1">V1</a>
+        <a href="http://localhost/xampp/scomentarios/pagina2.php" class="video" id="v2">V2</a>
+        <a href="http://localhost/xampp/scomentarios/pagina3.php" class="video" id="v3">V3</a>
+        <a href="http://localhost/xampp/scomentarios/pagina4.php" class="video" id="v4">V4</a>
     </article>
 
     <script src="script.js"></script>

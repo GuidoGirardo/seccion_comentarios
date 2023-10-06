@@ -31,10 +31,8 @@
 <body>
 
     <div id="div1">
-        <video width="640" height="360" controls>
-            <source src="mi-video.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
+
+        <iframe width="100%" height="335px" src="https://www.youtube.com/embed/7cBM_chGv0g?si=KEGQxiQ8f8Uhoj_G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <section id="comentarios">
             <?php
@@ -48,8 +46,8 @@
                         echo "<p>" . $row["comentario"] . "</p>";
                         echo "<p>" . $row["likes"] . "</p>";
                         echo "<p>" . $row["dislikes"] . "</p>";
-                        echo "<button>LIKE</button>";
-                        echo "<button>DISLIKE</button>";
+                        echo "<button class='btnLike' video='video1' data-id='{$row['id']}'>LIKE</button>";
+                        echo "<button class='btnDislike' video='video1' data-id='{$row['id']}'>DISLIKE</button>";
                         echo "</div>";
                     }
                 }
@@ -58,7 +56,11 @@
     </div>
 
     <div id="div2">
-        <article id="otros">otros videos</article>
+        <article id="otros">
+            <a href="http://localhost/xampp/scomentarios/pagina2.php" class="video" id="v2">V2</a>
+            <a href="http://localhost/xampp/scomentarios/pagina3.php" class="video" id="v3">V3</a>
+            <a href="http://localhost/xampp/scomentarios/pagina4.php" class="video" id="v4">V4</a>
+        </article>
 
         <form method="post">
             <input type="text" placeholder="Nombre de usuario" name="nombre">
@@ -67,6 +69,7 @@
         </form>
     </div>
 
+    <script src="script_p1.js"></script>
     <link rel="stylesheet" href="style_pagina1.css">
 </body>
 </html>
