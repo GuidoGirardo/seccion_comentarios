@@ -104,8 +104,8 @@ body{
     right: 80px;
 }
 
-#otros{
-    background-color: red;
+#div2 article{
+    background-color: rgb(255, 0, 0) !important;
     width: 200px;
     height: 100px;
     position: absolute;
