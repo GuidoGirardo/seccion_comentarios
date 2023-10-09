@@ -24,6 +24,8 @@
     $sql = "UPDATE $video SET likes = $nuevosLikes WHERE id = $comentarioId";
     $conn->query($sql);
 
+    echo $video;
+
     $conn->close();
 
 ?>

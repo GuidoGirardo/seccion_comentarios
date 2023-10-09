@@ -12,16 +12,19 @@
     /* TEMA LIKES Y DISLIKES */
     $data = json_decode(file_get_contents('php://input'), true);
     $comentarioId = $data['comentarioId'];
+    $video = $data['video'];
 
-    $sql = "SELECT * FROM video1 WHERE id = $comentarioId";
+    $sql = "SELECT * FROM $video WHERE id = $comentarioId";
     $response = $conn->query($sql);
 
     $row = $response->fetch_assoc();
     $dislikesActuales = $row['dislikes'];
     $nuevosDislikes = $dislikesActuales + 1;
 
-    $sql = "UPDATE video1 SET dislikes = $nuevosDislikes WHERE id = $comentarioId";
+    $sql = "UPDATE $video SET dislikes = $nuevosDislikes WHERE id = $comentarioId";
     $conn->query($sql);
+
+    echo $video;
 
     $conn->close();
 ?>

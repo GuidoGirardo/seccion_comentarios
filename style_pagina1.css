@@ -103,3 +103,14 @@ body{
     bottom: 25px;
     right: 80px;
 }
+
+#otros{
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    text-decoration: none;
+    color: #010101;
+}

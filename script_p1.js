@@ -4,18 +4,19 @@ let btnDislike = document.querySelectorAll(".btnDislike");
 btnLike.forEach(button => {
     button.addEventListener("click", ()=> {
         const comentarioId = button.getAttribute("data-id");
+        const video = button.getAttribute("video");
 
         /* hacer peticion a servidor */
         fetch("http://localhost/xampp/scomentarios/likes.php", {
             method: 'POST',
-            body: JSON.stringify({ comentarioId }),
+            body: JSON.stringify({ comentarioId, video }),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
         .then(response => {
             if (response.ok) {
-                console.log("Solicitud enviada con éxito");
+                console.log("Solicitud", response);
                 location.reload();
             }
         });
@@ -37,7 +38,7 @@ btnDislike.forEach(button => {
         })
         .then(response => {
             if (response.ok) {
-                console.log("Solicitud enviada con éxito");
+                console.log("Solicitud", response);
                 location.reload();
             }
         });
